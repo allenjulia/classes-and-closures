@@ -120,7 +120,7 @@ function motivation( firstname, lastname ) {
   var welcomeText = "You're doing awesome, keep it up";
 
   // code message function here.
-  function message (firstname, lastname){
+  function message (){
     return `${welcomeText} ${firstname} ${lastname}.`
   }
 
@@ -204,12 +204,16 @@ function secretNumber() {
   
   Fix the code below to log the desired output.
 */
-
 function timeOutCounter() {
+  let count= 0
   for (var i = 0; i <= 5; i++) {
     setTimeout(function() {
-      console.log(i);
+      console.log(preserveCounter());
     }, i * 1000);
+  }
+  function preserveCounter(){
+    return count++
   }
 }
 timeOutCounter();
+
